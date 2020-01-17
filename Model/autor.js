@@ -4,15 +4,15 @@ const autor= function(Autor){
     this.nombreAutor = Autor.nombre_autor;
 };
 
-autor.obtenerTodos = result =>{
+autor.obtenerAutor = result =>{
     connect.query('Select * from autor',(err,res)=>{
         if(err){
             console.log('Error',err);
-            result(-1,err);
+            result(null,err);
             return;
         }
         console.log(res);
-        result(1,res);
+        result(null,res);
     })
 }
 

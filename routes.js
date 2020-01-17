@@ -1,5 +1,5 @@
 
 module.exports=app=>{
-    const autor = require('./Model/autor');
-    app.post('/obtenerAutor',autor.obtenerTodos);
+    const autor = require('./Controller/controller_autor');
+    app.post('/obtenerAutor',autor.obtenerAutor);
 }
