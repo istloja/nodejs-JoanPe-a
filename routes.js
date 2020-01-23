@@ -6,4 +6,6 @@ module.exports=app=>{
     app.post('/createAutor',autor.createAutor);
 
     app.post('/eliminarAutor',autor.deleteAutor);
+
+    app.post('/actualizarAutor',autor.updateAutor);
 }
