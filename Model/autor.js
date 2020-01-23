@@ -26,4 +26,15 @@ autor.createAutor=(crearAutor,result) =>{
         result(null,res);
     })
 }
+autor.deleteAutor=(eliminarAutor,result)=>{
+    connect.query('Delete from autor where ?',eliminarAutor,(err,res)=>{
+        if(err){
+            console.log('Error eliminar',err);
+            result(null,err);
+            return;
+        }
+        console.log(res);
+        result(null,res);
+    })
+}
 module.exports=autor;
